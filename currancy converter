@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convert</title>
+</head>
+<body>
+    <h2 class="head">Currency converter</h2>
+    <input id="myInput" placeholder="Enter Indian Rupees.."/>
+    <div class="button">
+    <button onclick="convertToUSD()" class="usd">USD</button>
+    <button onclick="convertToYEN()" class="yen">YEN</button>
+    <button onclick="convertToEURO()" class="euro">EURO</button>
+</div>
+<div id="output">
+<script>
+    function convertToUSD(){
+        const inputbox=document.getElementById("myInput");
+        const outputDiv=document.getElementById("output");
+        outputDiv.innerHTML="converted to USD:"+(inputbox.value/84);
+    }
+    function convertToYEN(){
+        const inputbox=document.getElementById("myInput");
+        const outputDiv=document.getElementById("output");
+        outputDiv.innerHTML="converted to YEN:"+(inputbox.value/1.81);
+    }
+    function convertToEURO(){
+        const inputbox=document.getElementById("myInput");
+        const outputDiv=document.getElementById("output");
+        outputDiv.innerHTML="converted to EURO:"+(inputbox.value/.011);
+    }
+</script>
+</div>
+</body>
+</html>
